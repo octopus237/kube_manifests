@@ -37,4 +37,12 @@ spec:
           value: 10.1.1.15
           
 ---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mongo-express-secret
+type: Opaque
+data:
+  mongo-express-username: bW9uZ29hZG1pbg==
+  mongo-express-password: c2VjcmV0
 
