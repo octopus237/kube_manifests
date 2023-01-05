@@ -1,0 +1,30 @@
+# Please edit the object below. Lines beginning with a '#' will b
+# and an empty file will abort the edit. If an error occurs while
+# reopened with the relevant failures.
+#
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2023-01-05T10:43:23Z"
+  labels:
+    app: kubernetes-bootcamp
+  name: kubernetes-bootcamp
+  namespace: default
+  resourceVersion: "837"
+  uid: 6216f094-28eb-452f-b5fb-8ccf8f7c17c8
+spec:
+  clusterIP: 10.99.62.14
+  clusterIPs:
+  - 10.99.62.14
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 31737
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: kubernetes-bootcamp
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
