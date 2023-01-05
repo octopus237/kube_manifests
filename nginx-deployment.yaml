@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadate:
@@ -5,7 +6,6 @@ metadate:
   labels:
     app: nginx
   namespace: rp1-deployment
-
 spec:
   replicas: 2
   selector:
@@ -17,8 +17,7 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: nginx
-        image: nginx:latest
-        ports:
-        - containerPort: 8080
-
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 8080
