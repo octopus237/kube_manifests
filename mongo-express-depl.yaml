@@ -34,7 +34,10 @@ spec:
               name: mongo-express-secret
               key: mongo-express-password
         - name: ME_CONFIG_MONGODB_SERVER
-          value: 10.1.1.15
+          valueFrom:
+            configMapKeyRef:
+              name: mongo-configmap
+              key: database_url
           
 ---
 apiVersion: v1
